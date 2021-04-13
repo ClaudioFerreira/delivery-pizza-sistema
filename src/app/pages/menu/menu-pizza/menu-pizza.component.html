@@ -1,0 +1,94 @@
+<section class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1>Pizzas cadastradas</h1>
+      </div>
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item"><a href="#">Início</a></li>
+          <li class="breadcrumb-item active">Pizzas</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Filtro para pesquisa.</h3>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-4 col-sm-12">
+                <label>Campo</label>
+                <select name="field" id="fiels" class="form-control">
+                  <option value="">Selecione um campo</option>
+                  <option value="">Selecione um campo</option>
+                  <option value="">Selecione um campo</option>
+                  <option value="">Selecione um campo</option>
+                </select>
+              </div>
+
+              <div class="col-md-4 col-sm-12">
+                <label>Condição</label>
+                <select name="condition" id="condition" class="form-control">
+                  <option value="">Selecione uma condição</option>
+                  <option value="==">igual á</option>
+                  <option value="!=">diferente de</option>
+                  <option value=">">maior que</option>
+                  <option value="<">menor que</option>
+                  <option value=">=">maior ou igual que</option>
+                  <option value="<=">menor ou igual que</option>
+                </select>
+              </div>
+
+              <div class="col-md-4 col-sm-12">
+                <label>Valor</label>
+                <input type="text" placeholder="Oque deseja pesquisar" class="form-control">
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-success shadow-sm float-right">Cadastrar nova pizza</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-hover text-nowrap">
+                <thead>
+                  <th>#ID</th>
+                  <th>Nome</th>
+                  <th>Valor</th>
+                  <th></th>
+                </thead>
+                <tbody>
+                  <td>1</td>
+                  <td>Nome</td>
+                  <td>
+                    <span class="text-muted text-decoration-line-through">De: R$ <span>00,00</span></span>
+                    <br>
+                    <span> <span>Por:</span> R$ <span class="text-success"> 00,00</span> </span>
+                  </td>
+                  <td>
+                    <button class="btn text-info"><i class="fas fa-edit"></i></button>
+                    <button class="btn text-danger"><i class="fas fa-trash"></i></button>
+                  </td>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

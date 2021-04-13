@@ -1,3 +1,5 @@
+import { MenuPizzaComponent } from './pages/menu/menu-pizza/menu-pizza.component';
+import { PanelComponent } from './pages/panel/panel.component';
 import { AuthGuard } from './shared/guard/auth.guard';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { RegisterComponent } from './pages/register/register.component';
@@ -11,21 +13,28 @@ const routes: Routes = [
     path: '',
     component: DashboardComponent,
     children: [
+      { path: '', redirectTo: 'inicio', pathMatch: 'full' },
+      { path: 'inicio', component: PanelComponent },
       { path: 'pedidos', component: DashboardComponent },
       { path: 'contatos', component: DashboardComponent },
+      { path: 'cardapio/pizzas', component: MenuPizzaComponent },
+      // {
+      //   path: 'cardapio',
+      //   children: [
+      //     { path: 'cardapio', redirectTo: 'cardapio/pizzas' },
+      //   ],
+      // },
     ],
     canActivate: [AuthGuard],
   },
-  {
-    path: '',
-    component: LoginComponent,
-    pathMatch: 'full'
-    // redirectTo: 'entrar',
-    // children: [
-    //   { path: 'entrar', component: LoginComponent, pathMatch: 'full' },
-    // ],
-  },
-  { path: 'entrar', component: LoginComponent, pathMatch: 'full' },
+  // {
+  //   path: '',
+  //   children: [
+  //     { path: '', redirectTo: 'entrar' },
+  //     { path: 'entrar', component: LoginComponent },
+  //   ],
+  // },
+  { path: 'entrar', component: LoginComponent },
 ];
 
 @NgModule({

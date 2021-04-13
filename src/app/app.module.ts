@@ -9,6 +9,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { NavHeaderComponent } from './components/nav/nav-header/nav-header.component';
 import { NavFooterComponent } from './components/nav/nav-footer/nav-footer.component';
 import { NavSideMenuComponent } from './components/nav/nav-side-menu/nav-side-menu.component';
+import { PanelComponent } from './pages/panel/panel.component';
+import { MenuPizzaComponent } from './pages/menu/menu-pizza/menu-pizza.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { NavSideMenuComponent } from './components/nav/nav-side-menu/nav-side-me
     DashboardComponent,
     NavHeaderComponent,
     NavFooterComponent,
-    NavSideMenuComponent
+    NavSideMenuComponent,
+    PanelComponent,
+    MenuPizzaComponent,
   ],
   imports: [
     BrowserModule,
